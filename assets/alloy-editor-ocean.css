@@ -50,7 +50,7 @@
   float: left \9;
   width: 24px; }
 
-IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
+IE10-PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
   height: 24px;
   box-sizing: content-box; }
 
@@ -125,7 +125,7 @@ IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
     position: relative \9;
     top: 50% \9;
     transform: translateY(-50%) \9; }
-  .alloy-editor-container-edit-link IE10_PLUS::-ms-reveal, .alloy-editor-container-edit-link label, .alloy-editor-container-edit-table IE10_PLUS::-ms-reveal, .alloy-editor-container-edit-table label {
+  .alloy-editor-container-edit-link IE10-PLUS::-ms-reveal, .alloy-editor-container-edit-link label, .alloy-editor-container-edit-table IE10-PLUS::-ms-reveal, .alloy-editor-container-edit-table label {
     top: 0;
     transform: translateY(0); }
 
@@ -226,7 +226,7 @@ IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
         position: relative \9;
         top: 50% \9;
         transform: translateY(-50%) \9; }
-      .alloy-editor-container-styles > .alloy-editor-toolbar-element .alloy-editor-container IE10_PLUS::-ms-reveal, .alloy-editor-container-styles > .alloy-editor-toolbar-element .alloy-editor-container .alloy-editor-selected-style {
+      .alloy-editor-container-styles > .alloy-editor-toolbar-element .alloy-editor-container IE10-PLUS::-ms-reveal, .alloy-editor-container-styles > .alloy-editor-toolbar-element .alloy-editor-container .alloy-editor-selected-style {
         top: 0;
         transform: translateY(0); }
 
@@ -309,11 +309,11 @@ IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
   top: 0;
   bottom: 0; }
 
-::-moz-selection {
+.alloy-editor-editable ::-moz-selection {
   background: #e6f1fa !important;
   text-shadow: none; }
 
-::selection {
+.alloy-editor-editable ::selection {
   background: #e6f1fa !important;
   text-shadow: none; }
 
@@ -321,7 +321,7 @@ IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
   background-color: #32a8e6;
   border-radius: 4px;
   color: #fff;
-  font-family: 'Helvetica Neue'; }
+  font-family: "Helvetica Neue"; }
   .alloy-editor-toolbar.alloy-editor-arrow-box:after, [class*=alloy-editor-toolbar-].alloy-editor-arrow-box:after {
     color: #32a8e6; }
   .alloy-editor-toolbar .alloy-editor-button, .alloy-editor-toolbar .alloy-editor-toolbar-element, [class*=alloy-editor-toolbar-] .alloy-editor-button, [class*=alloy-editor-toolbar-] .alloy-editor-toolbar-element {
@@ -365,158 +365,3 @@ IE10_PLUS::-ms-reveal, [class*=alloy-editor-toolbar] {
 
 .alloy-editor-twitter-link {
   background-color: #f8f8f8; }
-
-@font-face {
-	font-family: 'alloyeditor';
-	src:url('fonts/alloyeditor.eot');
-	src:url('fonts/alloyeditor.eot?#iefix') format('embedded-opentype'),
-		url('fonts/alloyeditor.woff') format('woff'),
-		url('fonts/alloyeditor.ttf') format('truetype'),
-		url('fonts/alloyeditor.svg#alloyeditor') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-[class^="alloy-editor-icon-"], [class*=" alloy-editor-icon-"] {
-	font-family: 'alloyeditor';
-	speak: none;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1.2;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-
-.alloy-editor-icon-add:before {
-	content: "\E001";
-}
-
-.alloy-editor-icon-align-center:before {
-	content: "\E002";
-}
-
-.alloy-editor-icon-align-justified:before {
-	content: "\E003";
-}
-
-.alloy-editor-icon-align-left:before {
-	content: "\E004";
-}
-
-.alloy-editor-icon-align-right:before {
-	content: "\E005";
-}
-
-.alloy-editor-icon-arrow:before {
-	content: "\E006";
-}
-
-.alloy-editor-icon-bold:before {
-	content: "\E007";
-}
-
-.alloy-editor-icon-bulleted-list:before {
-	content: "\E008";
-}
-
-.alloy-editor-icon-camera:before {
-	content: "\E009";
-}
-
-.alloy-editor-icon-cell:before {
-	content: "\E00A";
-}
-
-.alloy-editor-icon-close:before {
-	content: "\E00B";
-}
-
-.alloy-editor-icon-code:before {
-	content: "\E00C";
-}
-
-.alloy-editor-icon-column:before {
-	content: "\E00D";
-}
-
-.alloy-editor-icon-h1:before {
-	content: "\E00E";
-}
-
-.alloy-editor-icon-h2:before {
-	content: "\E00F";
-}
-
-.alloy-editor-icon-image:before {
-	content: "\E010";
-}
-
-.alloy-editor-icon-italic:before {
-	content: "\E011";
-}
-
-.alloy-editor-icon-link:before {
-	content: "\E012";
-}
-
-.alloy-editor-icon-numbered-list:before {
-	content: "\E013";
-}
-
-.alloy-editor-icon-ok:before {
-	content: "\E014";
-}
-
-.alloy-editor-icon-quote:before {
-	content: "\E015";
-}
-
-.alloy-editor-icon-remove:before {
-	content: "\E016";
-}
-
-.alloy-editor-icon-removeformat:before {
-	content: "\E017";
-}
-
-.alloy-editor-icon-row:before {
-	content: "\E018";
-}
-
-.alloy-editor-icon-separator:before {
-	content: "\E019";
-}
-
-.alloy-editor-icon-strike:before {
-	content: "\E01A";
-}
-
-.alloy-editor-icon-subscript:before {
-	content: "\E01B";
-}
-
-.alloy-editor-icon-superscript:before {
-	content: "\E01C";
-}
-
-.alloy-editor-icon-table:before {
-	content: "\E01D";
-}
-
-.alloy-editor-icon-twitter:before {
-	content: "\E01E";
-}
-
-.alloy-editor-icon-underline:before {
-	content: "\E01F";
-}
-
-.alloy-editor-icon-unlink:before {
-	content: "\E020";
-}

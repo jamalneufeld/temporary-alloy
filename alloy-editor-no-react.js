@@ -4635,6 +4635,10 @@ CKEDITOR.tools.buildTableMap = function( table ) {
 
             CKEDITOR.once('resourcesLoaded', this._renderUI.bind(this));
 
+            editor.once('contentDom', function() {
+                editor.editable().addClass('alloy-editor-editable');
+            });
+
             this._loadLanguageFile();
         },
 
@@ -4646,13 +4650,19 @@ CKEDITOR.tools.buildTableMap = function( table ) {
          * @method destructor
          */
         destructor: function() {
-            React.unmountComponentAtNode(this._editorUIElement);
-
-            this._editorUIElement.parentNode.removeChild(this._editorUIElement);
+            if (this._editorUIElement) {
+                React.unmountComponentAtNode(this._editorUIElement);
+                this._editorUIElement.parentNode.removeChild(this._editorUIElement);
+            }
 
             var nativeEditor = this.get('nativeEditor');
 
             if (nativeEditor) {
+                var editable = nativeEditor.editable();
+                if (editable) {
+                    editable.removeClass('alloy-editor-editable');
+                }
+
                 nativeEditor.destroy();
             }
         },
@@ -4712,6 +4722,8 @@ CKEDITOR.tools.buildTableMap = function( table ) {
             editorUIElement.className = 'alloy-editor-ui';
 
             var uiNode = this.get('uiNode') || document.body;
+
+            uiNode.appendChild(editorUIElement);
 
             this._mainUI = React.render(React.createElement(AlloyEditor.UI, {
                 editor: this,
@@ -4870,7 +4882,7 @@ CKEDITOR.tools.buildTableMap = function( table ) {
              * @writeOnce
              */
             srcNode: {
-            	setter: '_toElement',
+                setter: '_toElement',
                 writeOnce: true
             },
 
@@ -4901,7 +4913,7 @@ CKEDITOR.tools.buildTableMap = function( table ) {
              * @writeOnce
              */
             uiNode: {
-            	setter: '_toElement',
+                setter: '_toElement',
                 writeOnce: true
             }
         }
