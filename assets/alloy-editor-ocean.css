@@ -1,3 +1,11 @@
+@font-face {
+    font-family: alloyeditor;
+    src: url(fonts/alloyeditor.eot);
+    src: url(fonts/alloyeditor.eot?#iefix)format('embedded-opentype'), url(fonts/alloyeditor.woff)format('woff'), url(fonts/alloyeditor.ttf)format('truetype'), url(fonts/alloyeditor.svg#alloyeditor)format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
 .alloy-editor-container, [class*=alloy-editor-container-] {
   -webkit-box-align: center;
   -moz-box-align: center;
