@@ -324,12 +324,12 @@
   text-shadow: none; }
 
 .ae-ui .ae-toolbar, .ae-ui [class^=ae-toolbar-] {
-  background-color: #32a8e6;
+  background-color: #FF2A45;
   border-radius: 4px;
   color: #fff;
   font-family: "Helvetica Neue"; }
   .ae-ui .ae-toolbar.ae-arrow-box:after, .ae-ui [class^=ae-toolbar-].ae-arrow-box:after {
-    color: #32a8e6; }
+    color: #FF2A45; }
   .ae-ui .ae-toolbar .ae-button, .ae-ui .ae-toolbar .ae-toolbar-element, .ae-ui [class^=ae-toolbar-] .ae-button, .ae-ui [class^=ae-toolbar-] .ae-toolbar-element {
     background-color: transparent; }
     .ae-ui .ae-toolbar .ae-button:hover, .ae-ui .ae-toolbar .ae-toolbar-element:hover, .ae-ui [class^=ae-toolbar-] .ae-button:hover, .ae-ui [class^=ae-toolbar-] .ae-toolbar-element:hover {
